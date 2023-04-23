@@ -9,9 +9,10 @@ describe('FillFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FillFormComponent ],
-    })
-    .compileComponents();
+      declarations: [FillFormComponent],
+      imports: [FormsModule, ReactiveFormsModule],
+      providers: [],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FillFormComponent);
     component = fixture.componentInstance;

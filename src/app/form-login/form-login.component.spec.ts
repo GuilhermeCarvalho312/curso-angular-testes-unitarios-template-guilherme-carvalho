@@ -11,9 +11,9 @@ describe('FormLoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormLoginComponent ],
-    })
-    .compileComponents();
+      declarations: [FormLoginComponent],
+      imports: [ReactiveFormsModule, HttpClientTestingModule], // Adicione aqui
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FormLoginComponent);
     component = fixture.componentInstance;

@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { FixProblemsComponent } from './fix-problems.component';
 
-import {MatDialogModule} from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
 
 describe('FixProblemsComponent', () => {
   let component: FixProblemsComponent;
@@ -12,9 +12,10 @@ describe('FixProblemsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FixProblemsComponent ],
-    })
-    .compileComponents();
+      declarations: [FixProblemsComponent],
+      imports: [MatDialogModule, FormsModule, ReactiveFormsModule],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FixProblemsComponent);
     component = fixture.componentInstance;
