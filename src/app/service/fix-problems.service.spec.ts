@@ -1,4 +1,7 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { FixProblemsService } from './fix-problems.service';
@@ -9,11 +12,11 @@ describe('FixProblemsService', () => {
   let url: any;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule],
     });
     service = TestBed.inject(FixProblemsService);
-    htppTestingController = TestBed.inject(HttpTestingController)
-    url = 'http://localhost:3000'
+    htppTestingController = TestBed.inject(HttpTestingController);
+    url = 'http://localhost:3000';
   });
 
   it('should be created', () => {
